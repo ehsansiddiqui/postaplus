@@ -1,0 +1,537 @@
+<!DOCTYPE php>
+<html dir="ltr" lang="en-US">
+    <head>
+
+        <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+        <meta name="author" content="Amer Salloum - SPlus Kuwait" />
+
+        <!-- Stylesheets
+        ============================================= -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="../style.css" type="text/css" />
+        <link rel="stylesheet" href="../css/swiper.css" type="text/css" />
+        <link rel="stylesheet" href="../css/dark.css" type="text/css" />
+        <link rel="stylesheet" href="../css/font-icons.css" type="text/css" />
+        <link rel="stylesheet" href="../css/animate.css" type="text/css" />
+        <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css" />
+
+        <link rel="stylesheet" href="../css/responsive.css" type="text/css" />
+        <link rel="stylesheet" href="../css/colors.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:image" content="http://www.postastc.com/Posta-Logo.jpg" />	
+        <link rel="mask-icon" sizes="any" href="../favicon-32x32.png"  />
+        <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+
+        <!-- Document Title
+        ============================================= -->
+        <title>Services - Posta Plus</title>
+        <style>
+            #header{
+                background-color: #FFF !important;
+                /*ea7f1d*/
+            }
+            #primary-menu li{
+
+                border-bottom: solid 1px #b96518;
+                overflow: hidden; 
+            }
+            #primary-menu  a{
+
+                margin:20px 20px;
+            }
+            #primary-menu li:after{
+
+            }
+            #primary-menu li.active{
+                background-color: #ea7f1d !important; 
+            }
+            #primary-menu li.active a{ 
+                color: #FFF !important;
+            }
+            #primary-menu li:hover{
+                background-color: #ea7f1d !important;
+                color:#FFF !important;
+            }
+            #primary-menu  li:hover  a{ 
+                color:#FFF !important;
+            }
+            .side-header #primary-menu ul li {
+                float: none;
+                margin: 0; 
+            }
+            .side-header #logo:not(.nobottomborder)::after, .side-header #primary-menu:not(.nobottomborder)::after {
+                border-bottom: none !important;
+            }
+            .d-lg-block {
+
+                position: fixed;
+                bottom: 0;
+            }
+            .side-header #header {
+                border-right: none;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.065);
+            }
+            #logo img{
+                padding: 0 20px;
+            }
+            .homepageicon{
+
+            }
+            .homepageicon:before{
+                font-family: 'font-icons';
+                content: "\e6d0";  
+                font-style: normal;
+                font-weight: normal; 
+                position: absolute;
+                font-size: 120px;
+                color: #bebebe;
+                opacity:0.2;
+                right:-20px;
+                top:40px;  
+                z-index: 1;
+
+                max-height: 100%;
+
+            }
+            .abouticon:before{
+                font-family: 'font-icons';
+                content: "\e710";  
+                font-style: normal;
+                font-weight: normal; 
+                position: absolute;
+                font-size: 120px;
+                color: #bebebe;
+                opacity:0.2;
+                right:-20px;
+                top:40px;  
+                z-index: 1;
+
+                max-height: 100%;
+
+            }
+            .servicesicon:before{
+                font-family: 'font-icons';
+                content: "\e6ce";  
+                font-style: normal;
+                font-weight: normal; 
+                position: absolute;
+                font-size: 120px;
+                color: #bebebe;
+                opacity:0.2;
+                right:-10px;
+                top:40px;  
+                z-index: 1;
+
+                max-height: 100%;
+
+            }
+            
+            
+            
+            .servicesicon2:before{
+                font-family: 'font-icons';
+                content: "\e72f";  /*----- MAAZ ----*/
+                font-style: normal;
+                font-weight: normal; 
+                position: absolute;
+                font-size: 120px;
+                color: #bebebe;
+                opacity:0.2;
+                right:-10px;
+                top:40px;  
+                z-index: 1;
+
+                max-height: 100%;
+
+            }
+            .locationsicon:before{
+                font-family: 'font-icons';
+                content: "\e7c2";  
+                font-style: normal;
+                font-weight: normal; 
+                position: absolute;
+                font-size: 110px;
+                color: #bebebe;
+                opacity:0.2;
+                right:0px;
+                top:40px;  
+                z-index: 1;
+
+                max-height: 100%;
+
+            }
+            .contacticon:before {
+                font-family: 'font-icons';
+                content: "\e748";  
+                font-style: normal;
+                font-weight: normal; 
+                position: absolute;
+                font-size: 110px;
+                color: #bebebe;
+                opacity:0.2;
+                right:-10px;
+                top:40px;  
+                z-index: 1;
+
+                max-height: 100%;
+
+            }
+            #primary-menu ul li a:before{
+                color: #bebebe;
+            }
+            #primary-menu ul li.active a:before{
+                color: #dedede;
+            }
+            #primary-menu ul li:hover a:before{
+                color: #bebebe;
+            }
+            @media only screen and (max-width: 600px){
+                .fbox-media{
+                    margin-bottom: 0px !important;
+                }
+                .feature-box.media-box p{
+                    margin-top:0px !important;
+                }
+                .feature-box {
+                    box-shadow: #dedede 1px 1px 8px;
+
+                }
+                .fbox-desc{
+                    padding:10px;
+                }
+            }
+            .fbox-desc h3{
+                color: #333333;
+                font-size:18px;
+            }
+            .fbox-desc p{
+                color: #444;
+            }
+
+
+            .service-box:hover {
+                background-color: transparent;
+                border: 5px solid #E87D1E;
+            }
+            .service-box:hover .st0{
+                fill:#E87D1E;
+            }
+
+            .st0{
+                fill:#fff;
+            }
+            .st0:hover{
+                fill:#E87D1E;
+            }
+
+
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                .service-box{
+                    border: none;
+                    background-color: #E87D1E; 
+                    border-radius: 10px;
+                    height: 100px;
+                    max-width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .service-box svg{
+                    position: absolute;
+                    height: 60px;
+                    width:60px;  
+                    left:50%;
+                    margin-left:-50px; 
+                    margin-top:25px;
+
+                }
+
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+                .service-box{
+                    border: none;
+                    background-color: #E87D1E; 
+                    border-radius: 10px;
+                    height: 100px;
+                    max-width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .service-box svg{
+                    position: absolute;
+                    height: 60px;
+                    width:60px;  
+                    left:50%;
+                    margin-left:-50px; 
+                    margin-top:25px;
+
+                }
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                .service-box{
+                    border: none;
+                    background-color: #E87D1E; 
+                    border-radius: 10px;
+                    height: 140px;
+                    max-width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .service-box svg{
+                    position: absolute;
+                    height: 80px;
+                    width:80px;  
+                    left:50%;
+                    margin-left:-50px; 
+                    margin-top:25px;
+
+                }
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                .service-box{
+                    border: none;
+                    background-color: #E87D1E; 
+                    border-radius: 10px;
+                    height: 177px;
+                    max-width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .service-box svg{
+                    position: absolute;
+                    height: 110px;
+                    width:110px;  
+                    left:50%;
+                    margin-left:-50px; 
+                    margin-top:25px;
+
+                }
+            } 
+
+
+
+
+
+
+
+
+
+
+            /*----- MAAZ ----*/
+            /*----- take the 2 rules below ----*/
+            /*----------------- you should add this to the style page, so the footer will be fixed in the bottom    */
+            .footerfixed {
+                position:fixed !important; 
+                bottom:0;     
+                width: calc(100% - 260px);
+                width: -moz-calc(100% - 260px);
+                width: -webkit-calc(100% - 260px);
+            }
+            @media only screen and (max-width: 990px) {
+                .footerfixed {
+                    position:fixed !important; 
+                    bottom:0px;
+                    width: 100% !important; 
+                }
+            }
+        </style>
+    </head>
+
+    <body class="stretched side-header" data-loader="2" data-animation-in="fadeIn" data-speed-in="1500" data-animation-out="fadeOut" data-speed-out="800" data-loader-color="ea7f1d">  
+
+        <!-- Document Wrapper
+        ============================================= -->
+        <div id="wrapper" class="clearfix"> 
+
+            <!-- Header
+            ============================================= -->
+            <header id="header" class="no-sticky  ">
+
+                <div id="header-wrap">
+
+                    <div class="container clearfix" style="padding: 0 !important;">
+
+                        <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                        <!-- Logo
+                        ============================================= -->
+                        <div id="logo" class="nobottomborder" style="">
+                            <a href="index.php" class="standard-logo" data-dark-logo="../images/logo-en.svg"><img src="../images/logo-colored-en.svg" alt="Posta Plus Logo"></a>
+                            <a href="index.php" class="retina-logo" data-dark-logo="../images/logo-en.svg"><img src="../images/logo-colored-en.svg" alt="Posta Plus Logo"></a>
+                        </div><!-- #logo end -->
+
+                        <div class="col_full center">
+                            <a href="../ar/index.php" style="color:#444; font-size:20px;">عربي</a>
+                        </div>
+                        <!-- Primary Navigation
+                        ============================================= -->
+                        <nav id="primary-menu">
+
+                            <ul>
+                                <li><a href="index.php" class="homepageicon"><div class=" "> Home</div></a> </li>
+                                <li><a href="about.php"  class="abouticon"><div>About</div></a> </li>
+                                <li><a href="services.php" class="servicesicon"><div>Services</div></a> </li>
+                                <li><a href="services2.php" class="servicesicon2"><div>Online Services</div></a> </li>
+                                <li><a href="branches.php" class="locationsicon"><div>Branches</div></a> </li>
+                                <li><a href="contact.php" class="contacticon"><div>Contact</div></a> </li> 
+
+                            </ul>
+
+                        </nav><!-- #primary-menu end -->
+
+                        <div class="clearfix d-none d-lg-block ">
+                            <a href="https://www.facebook.com/postaplus.sc/" target="_blank" class="social-icon si-small si-borderless si-facebook">
+                                <i class="icon-facebook"></i>
+                                <i class="icon-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/postaplus.sc/" target="_blank" class="social-icon si-small si-borderless si-instagram">
+                                <i class="icon-instagram"></i>
+                                <i class="icon-instagram"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header><!-- #header end -->
+
+
+
+            <!-- Content
+            ============================================= -->
+            <section id="content">
+
+                <div class="content-wrap">
+
+
+                    <div class="container clearfix " style="max-width:80%; margin-left: auto; margin-right:auto; margin-top:10vh;   "> 
+                        <div class='row' >
+                            <div class="col-md-8 offset-md-2 col-sm-12">
+                                <div class="style-msg successmsg" style="margin-left: auto; margin-right:auto;  " >
+                                    <div class="sb-msg"><i class="icon-thumbs-up"></i>We received your order successfully.</div>
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                </div>
+                                <h3 style="margin-left: auto; margin-right:auto;  ">Thank you for using Posta Plus Student center </h3>
+                                <div class="clearfix"></div>
+
+
+                                <table class="table"   style="margin-left:auto; margin-right:auto; width:600px; max-width:100%; ">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </section><!-- #content end -->
+
+            <!-- Footer
+            ============================================= -->
+            <footer id="footer" class="dark footerfixed  " style="">
+
+                <!-- Copyrights
+                ============================================= -->
+                <div id="copyrights" style="padding: 20px 0;">
+
+                    <div class="container clearfix">
+
+                        <div class="col_half">
+                            <img src="../images/logo-side-dark.png" style="height:50px; margin-bottom: 0px;" alt="" class="footer-logo">
+
+                            Copyrights &copy; 2019 All Rights Reserved by Pusta Plus.
+                        </div>
+
+                        <div class="col_half col_last tright">
+                            <div class="copyrights-menu copyright-links fright clearfix">
+                                <a href="index.php">Home</a>/<a href="about.php">About</a>/<a href="services.php">Services</a>/<a href="branches.php">Branches</a>/<a href="contact.php">Contact</a>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="copyrights-menu copyright-links fright clearfix">
+                                Phone: <a href="#">+965-24738383</a> <span style="margin-left:20px;"></span>Email:<a href="#">info@postastc.com</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div><!-- #copyrights end -->
+
+            </footer><!-- #footer end -->
+
+        </div><!-- #wrapper end -->
+
+        <!-- Go To Top
+        ============================================= -->
+        <div id="gotoTop" class="icon-angle-up"></div>
+
+        <!-- External JavaScripts
+        ============================================= -->
+        <script src="../js/jquery.js"></script>
+        <script src="../js/plugins.js"></script>
+
+        <!-- Footer Scripts
+        ============================================= -->
+        <script src="../js/functions.js"></script>
+
+    </body>
+</html>
